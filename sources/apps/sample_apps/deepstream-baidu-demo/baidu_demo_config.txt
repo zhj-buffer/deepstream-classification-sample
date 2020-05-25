@@ -60,17 +60,18 @@
 [property]
 gpu-id=0
 net-scale-factor=0.017124753831663668
-#offsets=123.675;116.28;103.53
-model-file=/home/nvidia/demo-baidu/params
-proto-file=/home/nvidia/demo-baidu/model
-model-engine-file=/home/nvidia/demo-baidu/params_b8_gpu0_fp16.engine
-mean-file=/home/nvidia/deepstream/deepstream/sources/apps/sample_apps/deepstream-baidu-demo/mean.ppm
-labelfile-path=/home/nvidia/demo-baidu/label_list.txt
+offsets=123.675;116.28;103.53
+model-file=params
+proto-file=model
+model-engine-file=params_b1_gpu0_fp16.engine
+#mean-file=mean.ppm
+labelfile-path=label_list.txt
 output-blob-names=softmax_181_fc2_tmp_5
 force-implicit-batch-dim=1
 batch-size=8
-# 0=FP32 and 1=INT8 mode
+# 0=FP32 and 1=INT8 2=FP16 mode 
 network-mode=2
+# primary / second
 process-mode=1
 #0=RGB, 1=BGR
 model-color-format=0
@@ -79,11 +80,10 @@ gie-unique-id=1
 output-blob-names=softmax_181_fc2_tmp_5
 classifier-async-mode=0
 classifier-threshold=0.51
-enable-dla=1
+enable-dla=0
 use-dla-core=0
 
 infer-dims=3;224;224
-scaling-compute-hw=2
 
 ## 0=Detector, 1=Classifier, 2=Segmentation, 100=Other
 network-type=1
