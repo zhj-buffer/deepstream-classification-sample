@@ -383,9 +383,9 @@ pgie_pad_buffer_probe (GstPad * pad, GstPadProbeInfo * info, gpointer u_data)
 
 				/* Font , font-color and font-size */
 				txt_params->font_params.font_name = (gchar *) "Serif";
-				txt_params->font_params.font_size = 13;
+				txt_params->font_params.font_size = 20;
 				txt_params->font_params.font_color.red = 0.0;
-				txt_params->font_params.font_color.green = 1.0;
+				txt_params->font_params.font_color.green = 0.0;
 				txt_params->font_params.font_color.blue = 0.0;
 				txt_params->font_params.font_color.alpha = 1.0;
 
